@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Input from '$lib/components/input.svelte';
+	import Canvas from '$lib/components/Canvas/index.svelte';
 </script>
 
 <svelte:head>
@@ -8,7 +9,7 @@
 </svelte:head>
 
 <div class="container">
-	<div class="canvas">This is Canvas</div>
+	<Canvas rows ={10} cols= {10} />
 	<div class="select-form">
 		<Input />
 	</div>
@@ -20,13 +21,6 @@
 		flex-direction: row;
 		width: 100vw;
 		height: 100vh;
-	}
-
-	.canvas {
-		height: 100vh;
-		min-width: 300px;
-		width: 70%;
-		background-color: aqua;
 	}
 
 	.select-form {
