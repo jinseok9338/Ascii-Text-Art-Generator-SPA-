@@ -1,59 +1,40 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import Input from '$lib/components/input.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Pixel Art To Ascii Generator</title>
+	<meta name="description" content="Pixel Art To Ascii Generator" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<div class="container">
+	<div class="canvas">This is Canvas</div>
+	<div class="select-form">
+		<Input />
+	</div>
+</div>
 
 <style>
-	section {
+	.container {
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.canvas {
+		height: 100vh;
+		min-width: 300px;
+		width: 70%;
+		background-color: aqua;
+	}
+
+	.select-form {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		height: 100vh;
+		width: 30%;
+		background-color: brown;
 		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
 	}
 </style>

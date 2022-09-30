@@ -11,12 +11,10 @@
 		</a>
 	</div>
 
-	<nav>
-	
-	</nav>
+	<nav />
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://www.github.com/jinseok9338">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -25,17 +23,15 @@
 <style>
 	header {
 		display: flex;
-	justify-content: space-between;
+		justify-content: space-between;
 
-    position: fixed;
-    width: 100vw;
-  
-    margin: 0 auto;
-    background-color: #fff;
-    font-family: var(--font);
-    z-index: 100;
-    user-select: none;
-    transition: transform .2s;
+		width: 100vw;
+		margin: 0 auto;
+		background-color: #fff;
+		font-family: var(--font);
+		z-index: 100;
+		user-select: none;
+		transition: transform 0.2s;
 	}
 
 	.corner {
@@ -62,11 +58,6 @@
 		justify-content: center;
 		--background: rgba(255, 255, 255, 0.7);
 	}
-
-
-
-
-
 
 	a:hover {
 		color: var(--color-theme-1);
